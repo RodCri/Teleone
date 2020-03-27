@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PBX</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- favicon -->
+    <link rel="icon" href="https://teleone.com.co/wp-content/uploads/2019/08/cropped-TeleOne-Favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://teleone.com.co/wp-content/uploads/2019/08/cropped-TeleOne-Favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://teleone.com.co/wp-content/uploads/2019/08/cropped-TeleOne-Favicon-180x180.png">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150544094-1"></script>
+    <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'UA-150544094-1');
+    </script>
+    
+    <!-- recaptcha -->
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+</head>
+
+<body>
+<div class="contenedor">
+    <section class="header-pbx" id="header-pbx">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 alpha">
+                <div class="fondd-image">
+                    <img src="img/mobile-header.png" alt="">
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                <div class="logo-pbx">
+                    <div class="container">
+                        <img src="img/logo-gray.svg" alt="">
+                    </div>
+                </div>
+                <div class="info-pbx">
+                    <div class="container">
+                        <h1>PBX VIRTUAL<br>CLOUD CENTRAL</h1>
+                        <p>Invierte en una PBX Virtual que garantice calidad <br>en las llamadas, portabilidad y seguridad de la información</p>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                                    <input type="text" class="form-control nombre" id="nombre"  name="nombre"
+                                        placeholder="Nombre" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                                    <input type="Email" class="form-control email" id="email" name="email"
+                                        placeholder="E-mail" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                                    <input type="text" class="form-control telefono" id="telefono" name="telefono"
+                                        placeholder="Numero de contacto" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                                    <select class="form-control adicionales" id="adicionales" name="adicionales">
+                                        <option disabled selected>Adicionales</option>
+                                        <option>Número virtual o DiD</option>
+                                        <option>Bolsa de minutos Fijos y celulares en Colombia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xl-8 col-lg-8 col-md-10 col-sm-10 col-10">
+                                    <!--<div class="g-recaptcha" data-sitekey="6LewN-IUAAAAACZ6nan5orH4bjTqmFxAW36dMxMg"></div>-->
+                                    <!--Prueba-->
+                                    <div class="g-recaptcha" data-sitekey="6LeZreMUAAAAAH5zTJG2CkL3k4jCrXF3Tl_nhNQE"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inversion-button">
+                            <button class="btn btn-cotiza">Cotiza ahora</button>
+                        </div>
+                        <div class="message">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ahorra">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                    <h2>Ahorra en los gastos de<br>tu empresa</h2>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 text-center">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                            <img src="img/transfer.png" alt="">
+                            <h4>Portabilidad</h4>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                            <img src="img/desktop-mobile.png" alt="">
+                            <h4>Desktop y en App</h4>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                            <img src="img/ivr.png" alt="">
+                            <h4>IVR (Contestador automático bilingüe)</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info-save">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                <img src="img/saving.png" alt="" class="image-info-save">
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                <div class="info-business">
+                    <div class="container">
+                        <h1>Ahorra en<br>los gastos de<br>tu empresa</h1>
+                        <li>Disponible en desktop y en App.</li>
+                        <li>Chat y videollamadas.</li>
+                        <li>Llamadas ilimitadas a ciudades capitales.</li>
+                        <li>Fax.</li>
+                        <li>Calidad de voz HD.</li>
+                        <li>Buzón de voz en el correo electrónico.</li>
+                        <li>Grabación de llamadas.</li>
+                        <li>IVR (contestador automático multilingue)</li>
+                        <li>Flexibilidad de conexión.</li>
+                        <li>Opción de alquilar los teléfonos físicos durante el contrato<br> (aplican condiciones y restricciones)</li>
+                        <li>Actualización tecnológica.</li>
+                        <li>Soporte técnico personalizado.</li>
+                    </div>
+                </div>
+                <div class="info-start">
+                    <div class="container">
+                        <h2>¿Qué se necesita para comenzar?</h2>
+                        <li>Internet de banda ancha de entre 20 - 30 megas.</li>
+                        <li>Teléfonos físicos <strong>(Disponibles más de 30 modelos para la venta o en alquiler).</strong></li>
+                        <li>Puede funcionar con Softphone (de preferencia pago para garantizar la calidad de la comunicación)</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pbx-options text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <img src="img/mobility.png" alt="">
+                    <div class="container">
+                        <p>Movilidad para hacer uso <br>del PBX en cualquier parte<br> del mundo</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+                    <img src="img/functionalities.png" alt="">
+                    <div class="container">
+                        <p>Múltiples funcionalidades<br> a un solo costo</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <img src="img/connectivity.png" alt="">
+                    <div class="container">
+                        <p>Conectividad</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <img src="img/support.png" alt="">
+                    <div class="container">
+                        <p>Estabilidad y soporte</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                    <img src="img/security.png" alt="">
+                    <div class="container">
+                        <p>Seguridad y respaldo en la <br>información almacenada <br>en la nube</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="logo-footer">
+                        <img src="img/footer-logo.png" alt="footer-logo"> <br>
+                        <span> Copyright 2020 © TeleOne </span>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="info-footer">
+                        <p></p>
+                        <span class="footer-link"><a href="https://teleone.com.co/"  target="_blank">teleone.com.co</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/formPBX.js"></script>
+</body>
+</html>

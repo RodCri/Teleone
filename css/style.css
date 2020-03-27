@@ -2,15 +2,41 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 body{
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     overflow-x: hidden;
+    background-color: #f3f3f3;
 }
-.fond-image{
+.alpha{
+    overflow: hidden;
+    display: none;
+}
+.g-recaptcha>div {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.g-recaptcha{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: -webkit-center;
+}
+.g-recaptcha>div{
+    transform:scale(0.90);
+    transform-origin: 0 0;
+}
+.contenedor{
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.fondd-image{
     position: relative;
 }
 .back-image{ 
@@ -19,21 +45,22 @@ body{
     left: 0;
     margin-top: 30px;
     margin-left: 50px;
-    width: 204px;
-    height: 60px;
+    width: 35%;
+    height: auto;
 }
 .header-text h1{
     color: #3BB1E6;
     font-size: 47px;
     font-weight: bold;
+    overflow: hidden;
 }
 .header-text p{
     font-size: 16px;
     color: #818386;
     font-weight: 400;
     line-height: 18px;
+    overflow: hidden;
 }
-
 .fond-image .front-image{
     width: 100%;
     height: auto;
@@ -54,7 +81,6 @@ body{
     background-color: #3BB1E6;
     color: #ffffff;
 }
-
 .info-step-left{
     padding: 30px;
 }
@@ -74,9 +100,6 @@ body{
 .info-step-left .option{
     font-weight: normal;
 }
-
-
-
 .info-step-right{
     padding: 30px;
 }
@@ -93,23 +116,23 @@ body{
     font-size: 14px;
     font-weight: normal;
 }
+.info-step-right .btn-outline-primary{
+    color: #ffffff;
+    border-color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
 .info-step-right .option-step-nombre{
     border: 2px solid #ffffff;
     color: #ffffff;
     border-radius: 5px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 60px 10px 60px;
 }
 .info-step-right .option-step-tel{
     border: 2px solid #ffffff;
     color: #ffffff;
     border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10px 10px 10px;
 }
 .info-step-right .option{
     color:#3BB1E6;
@@ -119,17 +142,27 @@ body{
     color: #ffffff !important;
     text-align: center;
 }
-.option-right{
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-}
 .option{
     border: 2px solid #3BB1E6;
     padding: 10px;
     border-radius: 5px;    
 }
+.option-right{
+    text-align: center;
+    width: 95%;
+}
+.option-right-2{
+    background-position: center;
+    margin-left: 35%;
+}
 .arrow{
     padding-left: 10px;
+}
+.arrow-white{
+    padding-left: 10px;
+    margin-top: 10px;
+    width: 35px;
+    height: 28px;
 }
 .page-footer{
     background-color: #3BB1E6;
@@ -139,9 +172,14 @@ body{
 .info-footer{
     text-align: right;
     padding-right: 80px;
-    font-size: 12px;
+    font-size: 16px;
     vertical-align: middle;
 }
+.info-footer a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .info-footer .footer-link{
     text-decoration: underline;
 }
@@ -167,6 +205,7 @@ body{
     border-right: 0;
     border-radius: 0px;
 }
+
 .form-control:focus{
     border-bottom: 1px solid #818386 !important;
     border-top: 0;
@@ -179,11 +218,12 @@ body{
     height: auto;
 }
 .section-content{
-    background-image: url("../img/Gray-Shape@2x.png");
+    background-image: url("../img/Gray-Shape.png");
     background-size: cover;
+    background-position: bottom;
 }
 .inversion .photo-inversion{
-    width: 400px;
+    width: 70%;
     height: auto;
 }
 .inversion{
@@ -194,9 +234,22 @@ body{
 }
 input,
 input::-webkit-input-placeholder {
-    font-size: 11px;
-    line-height: 4;
+    font-size: 12px;
 }
+select {
+    background-image: url("../img/down.png"); /*aquí deberás escribir la ruta de la imagen que utilizarás como flecha del desplegable*/
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+#adicionales{
+    font-size: 12px;
+    color: #818386;
+}
+
 .inversion-title{
     padding-bottom: 20px;
 }
@@ -224,14 +277,13 @@ input::-webkit-input-placeholder {
     border-color: #47C7EF;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
+    font-weight: bold;
     text-transform: uppercase;
     margin-top: 20px;
+    border-radius: 0px;
 }
 .sales{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
+    padding: 30px 0px 30px 0px;
 }
 .sales .title-sales h3{
     font-size: 27px;
@@ -252,10 +304,178 @@ input::-webkit-input-placeholder {
     font-weight: normal;
 }
 
-@media (max-width: 763px) {
-    .banner_text_iner{        
-        text-align: center;
-        margin-top: 30px;
+.info-step-right .btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #3bb1e6;
+    cursor: text;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle{
+    color: #ffffff;
+    background-color: #3bb1e6;
+    border-color: #3bb1e6;
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus{
+    box-shadow: #ffffff;
+}
+.btn.focus, .btn:focus{
+    box-shadow: none;
+}
+.btn-outline-primary:active{
+    background-color: #3bb1e6;
+    border-color: #3bb1e6;
+}
+.btn-outline-primary{
+    background-color: #3bb1e6;
+    border-color: #3bb1e6;
+}
+.how-text h2{
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
+}
+
+/* PBX-Virtual */
+.logo-pbx img{
+    padding: 46px 0 43px 78px; 
+    width: 50%;
+    height: auto;
+}
+.fondd-image img{
+    width: 95%;
+    height: auto;
+    max-width: 900px;
+    margin-left: 5%;
+}
+.header-pbx .info-pbx{
+    margin: 0 0 10px 78px;
+}
+.header-pbx{
+    background-image: url("../img/header-pbx.png");
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    min-height: 800px;
+}
+.info-pbx h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 68px;
+    color: #47C7EF;
+}
+.info-pbx p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #818386;
+}
+
+.ahorra{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background-image: url("../img/fund-save.png");
+}
+.ahorra h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #47C7EF;
+    padding-bottom: 2%;
+}
+.ahorra h4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 20px;
+    color: #818386;
+}
+
+.info-business{
+    background-color: #47C7EF;
+    padding: 2% 0 2% 0;
+}
+.image-info-save{
+    width: 85%;
+    height: auto;
+}
+.info-business .container{
+    padding: 3% 8% 3% 8%;
+}
+.info-business h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 37px;    
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-bottom: 3%;
+}
+.info-business li{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+.info-start{
+    padding: 2% 0 2% 0;
+}
+.info-start .container{
+    padding: 1% 10% 1% 10%;
+}
+.info-start h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 36px;
+    align-items: center;
+    color: #47C7EF;
+    padding-bottom: 3%;
+}
+.info-start li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;    
+    color: #818386;
+}
+.pbx-options{
+    margin: 2% 0 2% 0;
+}
+.pbx-options p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #47C7EF;
+    padding-bottom: 10%;
+}
+.pbx-options img{
+    padding-bottom: 5%;
+}
+@media (max-width:1280px){
+    .contenedor{
+        width: auto;
+    }
+}
+@media (min-width:991px) and (max-width:1180px){
+    .header-pbx{
+        background-position: 350px;
+    }
+    .header-pbx h1{
+        font-size: 50px;
     }
 }
 @media (max-width:990px){
@@ -266,14 +486,316 @@ input::-webkit-input-placeholder {
     .header-text{
         text-align: center;
     }
-}
-@media (max-width:768px){
+    .header-text h1{
+        font-size: 40px;
+    }
+    .header-text p{
+        font-size: 14px;
+    }
     .container{
         text-align: center;
     }
+    .fond-image .front-image{
+        width: 80%;
+        padding-bottom: 100px;
+    }
+    .how-text{
+        padding: 100px 0 10px 0;
+    }
+    .info-step-left{
+        padding-bottom: 100px;
+    }
+    .info-step-left h2{
+        font-size: 24px;
+    }
+    .info-step-right{
+        padding-bottom: 100px;
+    }
+    .info-step-right h2{
+        padding-top: 30px;
+    }
+    .inversion .photo-inversion{
+        padding: 100px 0 100px 0;
+        width: 60%;
+    }
+    .sales{
+        padding: 150px 0 100px 0;
+    }
+    .form-group{
+        margin-left: 15%;
+    }
+    .back-image{
+        width: 25%;
+        height: auto;
+    }
+    .option-right-2{
+        margin-left: 20px;
+    }
+    .option-right{
+        width: 70%;
+    }
+    .alpha{
+        overflow: visible !important;
+        display: inline;
+    }
+    .header-pbx{
+        background-image: none;
+    }
+    .ahorra h2{
+        font-size: 25px;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    .ahorra h4{
+        padding-bottom: 5%;
+    }
+    .image-info-save{
+        width: 40%;
+        margin-left: 25%;
+        padding-bottom: 5%;
+    }
+    .header-pbx .info-pbx{
+        margin: 0;
+        padding-top: 10%;
+    }
+    .logo-pbx img{
+        display: none;
+    }
+    .fondd-image{
+        text-align: end;        
+    }
+    .info-business li{
+        text-align: left;
+    }
+    .info-start li{
+        text-align: left;
+    }
 }
-@media (max-width:990px){
-    .container{
+@media (min-width:440px) and (max-width:720px){
+    .header-text h1{
+        font-size: 34px;
+    }
+    .how-text h2{
+        font-size: 34px;
+    }
+    .info-step-left h2{
+        font-size: 22px;
+    }
+    .info-step-left p{
+        font-size: 12px;
+    }
+    .info-step-right h2{
+        font-size: 22px;
+    }
+    .info-step-right h3{
+        font-size: 18px;
+    }
+    .info-step-right p{
+        font-size: 12px;
+    }
+    .info-step-right .btn-outline-primary{
+        font-size: 12px;
+    }
+    .info-step-right .option-right{
+        font-size: 12px;
+    }
+    .back-image{
+        width: 25%;
+        height: auto;
+    }
+    .front-image{
+        width: 100% !important;
+        height: auto;
+    }
+    .option-right{
+        width: 90%;
+    }
+    .option-right-2{
+        width: 40%;
+    }
+    .info-footer{
         text-align: center;
+        padding: 0px;
+    }
+    .logo-footer{
+        text-align: center;
+        padding: 0px;
+    }
+    .g-recaptcha>div{
+        transform:scale(0.85);
+        transform-origin: 0 0;
+    }
+    .g-recaptcha{
+        margin-left: 10%;
+    }
+    .header-pbx{
+        min-height: 0px;
+    }
+    .header-pbx .info-pbx{
+        margin: 0;
+    }
+    .logo-pbx img{
+        padding: 10% 0 5% 0;
+    }
+    .info-pbx h1{
+        font-size: 40px;
+        line-height: 49px;
+    }
+    .info-pbx p{
+        font-size: 13px;
+    }
+    .image-info-save{
+        width: 60%;
+        text-align: center;
+    }
+    .image-info-save{
+        width: 50%;
+        margin-left: 25%;
+        padding: 15% 0 15% 0;
+    }
+    .alpha{
+        overflow: visible;
+    }
+    
+    .ahorra{
+        padding: 15% 0 15% 0;
+    }
+
+    .info-business{
+        padding: 10% 0 10% 0;
+    }
+    .info-business li{
+        text-align: left;
+        font-size: 14px;
+    }
+    .info-business h1{
+        font-size: 28px;
+    }
+    .info-start{
+        padding: 10% 0 15% 0;
+    }
+    .info-start li{
+        text-align: left;
+        font-size: 14px;
+    }
+}
+@media (min-width:320px) and (max-width:440px){
+    .header-text h1{
+        font-size: 20px;
+    }
+    .header-text p{
+        font-size: 12px;
+    }
+    .how-text h2{
+        font-size: 20px;
+    }
+    .section-content h2{
+        font-size: 14px;
+    }
+    .section-content h3{
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    .section-content p{
+        font-size: 12px;
+    }
+    .sales .title-sales h3{
+        font-size: 20px;
+    }
+    .info-step-right .btn-outline-primary {
+        font-size: 12px;
+    }
+    .option-right{
+        font-size: 12px;
+    }
+    .logo-footer{
+        text-align: center;
+        padding: 0px;
+    }
+    .info-footer{
+        text-align: center;
+        padding: 0px;
+    }
+    .back-image{
+        width: 20%;
+        height: auto;
+        margin-left: 30px;
+    }
+    .front-image{
+        width: 100% !important;
+        height: auto;
+    }
+    .back-image{
+        width: 30% !important;
+    }
+    .option-right{
+        width: 100%;
+    }
+    .option-right-2{
+        width: 40%;
+    }
+    .g-recaptcha>div{
+        transform:scale(0.60);
+        transform-origin: 0 0;
+    }
+    .g-recaptcha{
+        margin-left: 5%;
+    }
+    .header-pbx{
+        min-height: 0px;
+    }
+    .header-pbx .info-pbx{
+        margin: 0;
+    }
+    .image-info-save{
+        width: 50%;
+        margin-left: 25%;
+        padding: 10% 0 10% 0;
+    }
+    .logo-pbx img{
+        padding: 20% 0 10% 0;
+    }
+    .info-pbx{
+        padding: 0 0 10% 0;
+    }
+    .info-pbx h1{
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .info-pbx p{
+        font-size: 11px;
+    }
+    .ahorra{
+        padding: 15% 0 15% 0;
+    }
+    .ahorra h2{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .info-business{
+        padding: 15% 0 15% 0;
+    }
+    .info-business h1{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .info-business li{
+        font-size: 12px;
+        line-height: 22px;
+        text-align: left;
+    }
+    .info-start{
+        padding: 15% 0 15% 0;
+    }
+    .info-start h2{
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .info-start li{
+        font-size: 12px;
+        text-align: justify;
+    }
+    .pbx-options p{
+        font-size: 12px;
     }
 }
